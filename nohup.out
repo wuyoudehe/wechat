@@ -1,0 +1,45 @@
+[2017-06-21 15:38:17 +0800] [31941] [INFO] Starting gunicorn 19.7.1
+[2017-06-21 15:38:17 +0800] [31941] [INFO] Listening at: http://0.0.0.0:80 (31941)
+[2017-06-21 15:38:17 +0800] [31941] [INFO] Using worker: sync
+[2017-06-21 15:38:17 +0800] [31944] [INFO] Booting worker with pid: 31944
+[2017-06-21 15:38:17 +0800] [31944] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'mychat'
+[2017-06-21 15:38:17 +0800] [31944] [INFO] Worker exiting (pid: 31944)
+[2017-06-21 15:38:17 +0800] [31941] [INFO] Shutting down: Master
+[2017-06-21 15:38:17 +0800] [31941] [INFO] Reason: Worker failed to boot.
+[2017-06-21 15:38:56 +0800] [31945] [INFO] Starting gunicorn 19.7.1
+[2017-06-21 15:38:56 +0800] [31945] [INFO] Listening at: http://0.0.0.0:80 (31945)
+[2017-06-21 15:38:56 +0800] [31945] [INFO] Using worker: sync
+[2017-06-21 15:38:56 +0800] [31948] [INFO] Booting worker with pid: 31948
+[2017-06-21 15:41:50 +0800] [31952] [INFO] Starting gunicorn 19.7.1
+[2017-06-21 15:41:50 +0800] [31952] [INFO] Listening at: http://127.0.0.1:1010 (31952)
+[2017-06-21 15:41:50 +0800] [31952] [INFO] Using worker: sync
+[2017-06-21 15:41:50 +0800] [31955] [INFO] Booting worker with pid: 31955
+[2017-06-21 15:54:11 +0800] [31945] [INFO] Handling signal: term
+[2017-06-21 15:54:11 +0800] [31948] [INFO] Worker exiting (pid: 31948)
+[2017-06-21 15:54:11 +0800] [31945] [INFO] Shutting down: Master
+[2017-06-21 15:54:27 +0800] [31952] [INFO] Handling signal: term
+[2017-06-21 15:54:27 +0800] [31955] [INFO] Worker exiting (pid: 31955)
+[2017-06-21 15:54:27 +0800] [31952] [INFO] Shutting down: Master
+[2017-06-21 16:05:16 +0800] [1490] [INFO] Starting gunicorn 19.7.1
+[2017-06-21 16:05:16 +0800] [1490] [INFO] Listening at: http://127.0.0.1:1010 (1490)
+[2017-06-21 16:05:16 +0800] [1490] [INFO] Using worker: sync
+[2017-06-21 16:05:16 +0800] [1493] [INFO] Booting worker with pid: 1493
+[2017-06-21 16:06:33 +0800] [1490] [INFO] Handling signal: hup
+[2017-06-21 16:06:33 +0800] [1490] [INFO] Hang up: Master
+[2017-06-21 16:06:33 +0800] [1521] [INFO] Booting worker with pid: 1521

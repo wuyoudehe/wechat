@@ -1,0 +1,24 @@
+[2017-06-21 16:04:07 +0800] [1482] [INFO] Starting gunicorn 19.7.1
+[2017-06-21 16:04:07 +0800] [1482] [INFO] Listening at: http://127.0.0.1:1010 (1482)
+[2017-06-21 16:04:07 +0800] [1482] [INFO] Using worker: sync
+[2017-06-21 16:04:07 +0800] [1485] [INFO] Booting worker with pid: 1485
+[2017-06-21 16:04:07 +0800] [1485] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.5/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'wechat'
+[2017-06-21 16:04:07 +0800] [1485] [INFO] Worker exiting (pid: 1485)
+[2017-06-21 16:04:07 +0800] [1482] [INFO] Shutting down: Master
+[2017-06-21 16:04:07 +0800] [1482] [INFO] Reason: Worker failed to boot.
